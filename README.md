@@ -72,10 +72,12 @@ Power: Power the Pico via USB from the host device. Ensure stable 3.3V for the s
 ## Communication Flow
 [picture]
 
-## Pico Code to Read and Send Soil Moisture Data
-The Pico will read soil moisture and send the data over the serial connection (USB) to the host device. The code below formats the data as JSON for easy parsing by the host.
+## Pico Code to Read and Send Sensor Data
+The Pico will read soil moisture and send the data over the serial connection (USB) to the host device. The code `main.py` formats the data as JSON for easy parsing by the host.
 
 Upload `main.py` to Pico and make sure to **close the VSCode window for `main.py`** to release the serial port being used.
+
+Use PuTTy to read inputs from Pico through serial port (COM3)
 
 ## Host Device Code to Communicate with Azure IoT Hub
 The host device (e.g., your computer) will:
@@ -98,6 +100,8 @@ Make sure you have `host.py` on your computer.
 - On Windows: Open **Device Manager**, look under “Ports (COM & LPT)” for the Pico’s COM port (e.g., `COM3`).
 - On Linux/Mac: Run ls /dev/tty* to find the port (e.g., /dev/ttyACM0).
 - Update `SERIAL_PORT` in the code to match your port.
+
+## Run
 
 
 
