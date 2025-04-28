@@ -6,7 +6,7 @@ A detailed documentation of how to connect Raspberry Pi Pico RP2040 to the cloud
 1. [Raspberry Pi Pico RP2040](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#pico-1-family) (no wifi available)
 2. Sensor (used in this project: Capacitive Soil Moisture Sensor v2.0)
 3. Micro-USB wire
-4. Your own PC
+4. Your own PC with a Serial Port
 
 ### Dependencies
 
@@ -103,5 +103,9 @@ Make sure you have `host.py` on your computer.
 
 ## Run
 
+## Credits
+1. For Azure account and Azure IoT service setup: [IoT-For-Beginners]((https://github.com/microsoft/IoT-For-Beginners/tree/main/)
+2. Fix the blocking problem in serial communication between host device and microcontroller: [link]()
+3.  
 
 
