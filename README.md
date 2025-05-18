@@ -1,5 +1,5 @@
 # pico_pi_and_cloud [still updating]
-A detailed documentation of how to connect Raspberry Pi Pico RP2040 to the cloud through Serial communication between the microcontroller and the host computer.
+A detailed documentation of connecting Raspberry Pi Pico RP2040 without Internet access to the cloud through Serial Communication between the microcontroller and the host computer.
 
 ## Requirements
 ### Hardware
@@ -57,7 +57,7 @@ Check this out: [Create IoT Service](https://github.com/microsoft/IoT-For-Beginn
 - Install the Pico Extension and MicroPico vREPL for debugging. Check out [Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf).
 - Connect to the Pico via USB and verify it’s detected in MicroPico vREPL shell.
 
-### Hardware Wiring
+### Hardware Wiring 
 Soil Moisture Sensor:
 
 - Connect a capacitive soil moisture sensor (recommended to avoid corrosion):
@@ -67,10 +67,12 @@ Soil Moisture Sensor:
 
 Power: Power the Pico via USB from the host device. Ensure stable 3.3V for the sensor.
 
-[picture]
+![wiring](./img/wiring.png) 
+
+Credit: [my IoT team](https://github.com/ThanhDat4250/Soil-Moisture)
 
 ## Communication Flow
-[picture]
+![comflow](./img/comflow.png)
 
 ## Pico Code to Read and Send Sensor Data
 The Pico will read soil moisture and send the data over the serial connection (USB) to the host device. The code `main.py` formats the data as JSON for easy parsing by the host.
